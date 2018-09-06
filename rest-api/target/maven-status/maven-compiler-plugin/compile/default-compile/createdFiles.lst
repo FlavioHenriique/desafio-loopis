@@ -1,9 +1,9 @@
 br/edu/ifpb/rest/resources/AlunoResource.class
-br/edu/ifpb/rest/resources/RestApplication.class
 br/edu/ifpb/rest/domain/Aluno_.class
-br/edu/ifpb/rest/domain/Aluno.class
 br/edu/ifpb/rest/dao/AlunoDAO.class
 br/edu/ifpb/rest/domain/Professor_.class
 br/edu/ifpb/rest/domain/Professor.class
 br/edu/ifpb/rest/domain/Disciplina_.class
 br/edu/ifpb/rest/domain/Disciplina.class
+br/edu/ifpb/rest/resources/RestApplication.class
+br/edu/ifpb/rest/domain/Aluno.class

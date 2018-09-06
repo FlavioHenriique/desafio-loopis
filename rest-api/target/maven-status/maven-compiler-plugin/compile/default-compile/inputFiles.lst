@@ -3,4 +3,6 @@
 /home/flavio/ADS/5º  Período/Loopis/desafio-loopis/rest-api/src/main/java/br/edu/ifpb/rest/dao/AlunoDAO.java
 /home/flavio/ADS/5º  Período/Loopis/desafio-loopis/rest-api/src/main/java/br/edu/ifpb/rest/domain/Disciplina.java
 /home/flavio/ADS/5º  Período/Loopis/desafio-loopis/rest-api/src/main/java/br/edu/ifpb/rest/domain/Professor.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/rest-api/src/main/java/br/edu/ifpb/rest/dao/ProfessorDAO.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/rest-api/src/main/java/br/edu/ifpb/rest/resources/ProfessorResource.java
 /home/flavio/ADS/5º  Período/Loopis/desafio-loopis/rest-api/src/main/java/br/edu/ifpb/rest/resources/AlunoResource.java

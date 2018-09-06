@@ -1,52 +1,50 @@
 package br.edu.ifpb.rest.dao;
 
-import br.edu.ifpb.rest.domain.Aluno;
+import br.edu.ifpb.rest.domain.Professor;
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-public class AlunoDAO {
+public class ProfessorDAO {
 
     private EntityManager manager;
 
-    public AlunoDAO() {
+    public ProfessorDAO() {
         manager = Persistence
                 .createEntityManagerFactory("Loopis")
                 .createEntityManager();
     }
 
-    public void salvar(Aluno a) {
-        System.out.println(a.toString());
+    public void salvar(Professor professor) {
+
         manager.getTransaction().begin();
-        manager.persist(a);
+        manager.persist(professor);
         manager.getTransaction().commit();
     }
 
     public void deletar(String matricula) {
-
         manager.getTransaction().begin();
         manager.remove(buscar(matricula));
         manager.getTransaction().commit();
     }
 
-    public Aluno atualizar(Aluno a) {
-        
-        manager.getTransaction().begin();
-        manager.merge(a);
-        manager.getTransaction().commit();
-        return buscar(a.getMatricula());
-    }
-
-    public Aluno buscar(String matricula) {
-
-        return manager.find(Aluno.class, matricula);
-    }
-
-    public List<Aluno> todos() {
+    public List<Professor> todos() {
 
         return manager
-                .createQuery("SELECT a FROM Aluno a", Aluno.class)
+                .createQuery("SELECT p FROM Professor p")
                 .getResultList();
     }
+
+    public Professor atualizar(Professor professor) {
+        manager.getTransaction().begin();
+        manager.merge(professor);
+        manager.getTransaction().commit();
+        return buscar(professor.getMatricula());
+    }
+
+    public Professor buscar(String matricula) {
+
+        return manager.find(Professor.class, matricula);
+    }
+
 }
