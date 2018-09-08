@@ -52,11 +52,11 @@ public class ProfessorResource {
         return Response.status(Response.Status.NOT_FOUND).build();
     }
     
-     @DELETE
-    @Path("/{matricula}")
-    public Response deletar(@PathParam("matricula") String matricula) {
-        System.out.println(matricula);
-        dao.deletar(matricula);
+    @DELETE
+    @Path("/{mat}")
+    public Response deletar(@PathParam("mat") String mat) {
+        System.out.println(mat);
+        dao.deletar(mat);
         return Response.ok().build();
     }
 
