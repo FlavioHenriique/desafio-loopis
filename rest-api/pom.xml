@@ -7,7 +7,7 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>loopis-rest-api</name>
+    <name>loopis-api</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -94,7 +94,9 @@
                     </execution>
                 </executions>
             </plugin>
+    
         </plugins>
+        <finalName>loopis-api</finalName>
     </build>
-
+    
 </project>

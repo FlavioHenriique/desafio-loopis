@@ -1,7 +1,6 @@
 package br.edu.ifpb.rest.resources;
 
 import br.edu.ifpb.rest.dao.ProfessorDAO;
-import br.edu.ifpb.rest.domain.Aluno;
 import br.edu.ifpb.rest.domain.Professor;
 import com.google.gson.Gson;
 import javax.ws.rs.Consumes;
