@@ -8,8 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Disciplina implements Serializable {
@@ -17,11 +17,15 @@ public class Disciplina implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    
     private String nome;
-    @OneToMany(cascade = CascadeType.REMOVE)
+    
+    @ManyToMany(cascade = CascadeType.REMOVE)
     private List<Aluno> alunos;
+    
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Professor professor;
+    
     private int cargaHoraria;
 
     public Disciplina(int id, String nome, List<Aluno> alunos,
