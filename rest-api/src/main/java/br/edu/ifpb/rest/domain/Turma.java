@@ -12,7 +12,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Disciplina implements Serializable {
+public class Turma implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +28,7 @@ public class Disciplina implements Serializable {
     
     private int cargaHoraria;
 
-    public Disciplina(int id, String nome, List<Aluno> alunos,
+    public Turma(int id, String nome, List<Aluno> alunos,
             Professor professor, int cargaHoraria) {
         this.id = id;
         this.nome = nome;
@@ -37,7 +37,7 @@ public class Disciplina implements Serializable {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public Disciplina() {
+    public Turma() {
     }
 
     public int getId() {
@@ -102,7 +102,7 @@ public class Disciplina implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Disciplina other = (Disciplina) obj;
+        final Turma other = (Turma) obj;
         if (this.id != other.id) {
             return false;
         }
@@ -123,9 +123,12 @@ public class Disciplina implements Serializable {
 
     @Override
     public String toString() {
-        return "Disciplina{" + "id=" + id + ", nome=" + nome
-                + ", alunos=" + alunos + ", professor=" + professor
-                + ", cargaHoraria=" + cargaHoraria + '}';
+        return "Disciplina{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", alunos=" + alunos +
+                ", professor=" + professor +
+                ", cargaHoraria=" + cargaHoraria +
+                '}';
     }
-
 }

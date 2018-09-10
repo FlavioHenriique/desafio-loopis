@@ -81,8 +81,11 @@ public class Aluno implements Serializable {
 
     @Override
     public String toString() {
-        return "Aluno{" + "matricula=" + matricula + ", idade=" + idade +
-                ", nome=" + nome + '}';
+        return "Aluno{" +
+                "matricula='" + matricula + '\'' +
+                ", idade=" + idade +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 
 }

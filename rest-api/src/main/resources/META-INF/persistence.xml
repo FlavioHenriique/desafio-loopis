@@ -3,8 +3,8 @@
   <persistence-unit name="Loopis" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>br.edu.ifpb.rest.domain.Aluno</class>
-    <class>br.edu.ifpb.rest.domain.Disciplina</class>
     <class>br.edu.ifpb.rest.domain.Professor</class>
+    <class>br.edu.ifpb.rest.domain.Turma</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://host-banco:5432/loopisdb"/>

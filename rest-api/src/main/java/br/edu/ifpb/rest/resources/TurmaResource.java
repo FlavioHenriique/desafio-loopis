@@ -1,7 +1,7 @@
 package br.edu.ifpb.rest.resources;
 
-import br.edu.ifpb.rest.dao.DisciplinaDAO;
-import br.edu.ifpb.rest.domain.Disciplina;
+import br.edu.ifpb.rest.dao.TurmaDAO;
+import br.edu.ifpb.rest.domain.Turma;
 import com.google.gson.Gson;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -15,17 +15,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-@Path("disciplina")
-public class DisciplinaResource {
+@Path("turma")
+public class TurmaResource {
 
-    private DisciplinaDAO dao = new DisciplinaDAO();
+    private TurmaDAO dao = new TurmaDAO();
     private Gson gson = new Gson();
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response salvar(String json) {
 
-        Disciplina d = gson.fromJson(json, Disciplina.class);
+        Turma d = gson.fromJson(json, Turma.class);
         dao.salvar(d);
 
         return Response.ok().build();
@@ -36,7 +36,7 @@ public class DisciplinaResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response buscarDisciplina(@PathParam("id") int id) {
 
-        Disciplina d = dao.buscar(id);
+        Turma d = dao.buscar(id);
         if (d != null) {
             return Response
                     .ok()
@@ -68,8 +68,7 @@ public class DisciplinaResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response atualizar(String json) {
 
-        Disciplina d = dao.atualizar(
-                gson.fromJson(json, Disciplina.class)
+        Turma d = dao.atualizar(gson.fromJson(json, Turma.class)
         );
 
         return Response.ok().entity(gson.toJson(d)).build();

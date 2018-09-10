@@ -1,22 +1,22 @@
 package br.edu.ifpb.rest.dao;
 
-import br.edu.ifpb.rest.domain.Disciplina;
+import br.edu.ifpb.rest.domain.Turma;
 import br.edu.ifpb.rest.domain.Professor;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-public class DisciplinaDAO {
+public class TurmaDAO {
 
     private EntityManager manager;
 
-    public DisciplinaDAO() {
+    public TurmaDAO() {
         manager = Persistence
                 .createEntityManagerFactory("Loopis")
                 .createEntityManager();
     }
 
-    public void salvar(Disciplina d) {
+    public void salvar(Turma d) {
         manager.getTransaction().begin();
         d.setProfessor(new ProfessorDAO()
                 .buscar(d.getProfessor().getMatricula()));
@@ -30,19 +30,19 @@ public class DisciplinaDAO {
         manager.getTransaction().commit();
     }
 
-    public Disciplina buscar(int id) {
+    public Turma buscar(int id) {
 
-        return manager.find(Disciplina.class, id);
+        return manager.find(Turma.class, id);
     }
 
-    public Disciplina atualizar(Disciplina d) {
+    public Turma atualizar(Turma d) {
         manager.getTransaction().begin();
         manager.merge(d);
         manager.getTransaction().commit();
         return buscar(d.getId());
     }
 
-    public List<Disciplina> todas() {
+    public List<Turma> todas() {
 
         return manager
                 .createQuery("SELECT d FROM Disciplina d")
