@@ -23,7 +23,7 @@ export class HomePage {
     matricula: "",
     idade: ""
   };
-  todos: Array<aluno> = [];
+  todos: any = [];
 
   constructor(public http: HttpClient, public navCtrl: NavController,
     public alert: AlertController) {

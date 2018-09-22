@@ -21,7 +21,7 @@ export class AboutPage {
     matricula:"",
     salario:""
   };
-  todos: any[] = [];
+  todos: any = [];
   url: string = "http://127.0.0.1:8081/loopis-api/api/professor";
 
   constructor(public navCtrl: NavController, public http: HttpClient,

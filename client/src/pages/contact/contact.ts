@@ -15,10 +15,10 @@ interface professor {
   salario: string
 }
 
-interface turma {
+interface Turma {
   nome: string,
   id: string,
-  alunos: aluno[],
+  alunos: any,
   professor: professor,
   cargahoraria: string
 }
@@ -29,15 +29,16 @@ interface turma {
 })
 export class ContactPage {
 
-  turmas: Array<turma> = [];
+  turmas: any = [];
 
-  turma: turma = {
+  turma: Turma = {
     nome: "",
+    id:null,
     cargahoraria: "",
     professor: { nome: "", matricula: "", salario: "" },
     alunos: []
   };
-  professores: Array<professor> = [];
+  professores: any = [];
 
   url: string = "http://127.0.0.1:8081/loopis-api/api/";
   constructor(public navCtrl: NavController, public http: HttpClient,
