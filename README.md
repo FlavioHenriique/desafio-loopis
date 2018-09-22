@@ -1,6 +1,11 @@
 # desafio-loopis
 ## Repositório destinado ao desafio proposto pela Loopis Jr 
 
+Tecnologias utilizadas
+  Banco de dados: PostgreSQL
+  API Rest: Java (JAX-RS)
+  Cliente mobile: Ionic 2
+
 Para executar a API Rest, abra a pasta api/ e execute o seguinte comando no terminal:
 **`sh run.sh`**
 
