@@ -1,5 +1,5 @@
 # desafio-loopis
-##Repositório destinado ao desafio proposto pela Loopis Jr 
+## Repositório destinado ao desafio proposto pela Loopis Jr 
 
 Para executar a API Rest, abra a pasta api/ e execute o seguinte comando no terminal:
 **`sh run.sh`**
