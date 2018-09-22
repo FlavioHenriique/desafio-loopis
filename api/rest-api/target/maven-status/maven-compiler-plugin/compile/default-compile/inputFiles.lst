@@ -1,0 +1,11 @@
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/dao/ProfessorDAO.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/domain/Aluno.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/resources/TurmaResource.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/resources/CORSFilter.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/domain/Turma.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/resources/AlunoResource.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/resources/RestApplication.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/resources/ProfessorResource.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/dao/AlunoDAO.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/dao/TurmaDAO.java
+/home/flavio/ADS/5º  Período/Loopis/desafio-loopis/api/rest-api/src/main/java/br/edu/ifpb/rest/domain/Professor.java

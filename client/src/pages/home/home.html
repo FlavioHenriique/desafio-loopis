@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Aluno</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Cadastro de alunos</h3>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Matrícula</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.matricula"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Idade</ion-label>
+      <ion-input type="number" [(ngModel)]="aluno.idade"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="cadastrarAluno()">Cadastrar</button>
+  <button ion-button full (click)="atualiza()" style="display:none;"
+  id="btAtualizar">Atualizar</button>
+  <br>
+  <h3>Alunos cadastrados</h3>
+
+  <ion-item *ngFor="let aluno of todos">
+
+    {{aluno.nome}}
+    
+          <button (click)="deletarAluno(aluno.matricula)" color="light" ion-button>
+              <ion-icon name="trash" ></ion-icon>
+          </button>
+          <button ion-button color="light" (click)="atualizarAluno(aluno)">
+              <ion-icon name="refresh" ></ion-icon>
+          </button>
+        
+      
+  </ion-item>
+
+</ion-content>

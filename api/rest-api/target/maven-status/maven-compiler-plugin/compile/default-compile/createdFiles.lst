@@ -1,0 +1,14 @@
+br/edu/ifpb/rest/resources/AlunoResource.class
+br/edu/ifpb/rest/domain/Aluno_.class
+br/edu/ifpb/rest/dao/ProfessorDAO.class
+br/edu/ifpb/rest/dao/AlunoDAO.class
+br/edu/ifpb/rest/domain/Turma.class
+br/edu/ifpb/rest/domain/Turma_.class
+br/edu/ifpb/rest/domain/Professor_.class
+br/edu/ifpb/rest/resources/CORSFilter.class
+br/edu/ifpb/rest/domain/Professor.class
+br/edu/ifpb/rest/resources/ProfessorResource.class
+br/edu/ifpb/rest/resources/RestApplication.class
+br/edu/ifpb/rest/domain/Aluno.class
+br/edu/ifpb/rest/dao/TurmaDAO.class
+br/edu/ifpb/rest/resources/TurmaResource.class
