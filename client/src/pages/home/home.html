@@ -24,23 +24,22 @@
     </ion-item>
   </ion-list>
   <button ion-button full (click)="cadastrarAluno()">Cadastrar</button>
-  <button ion-button full (click)="atualiza()" style="display:none;"
-  id="btAtualizar">Atualizar</button>
+  <button ion-button full (click)="atualiza()" style="display:none;" id="btAtualizar">Atualizar</button>
   <br>
   <h3>Alunos cadastrados</h3>
 
   <ion-item *ngFor="let aluno of todos">
 
     {{aluno.nome}}
-    
-          <button (click)="deletarAluno(aluno.matricula)" color="light" ion-button>
-              <ion-icon name="trash" ></ion-icon>
-          </button>
-          <button ion-button color="light" (click)="atualizarAluno(aluno)">
-              <ion-icon name="refresh" ></ion-icon>
-          </button>
-        
-      
+
+    <button (click)="deletarAluno(aluno.matricula)" color="light" ion-button>
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    <button ion-button color="light" (click)="atualizarAluno(aluno)">
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+
+
   </ion-item>
 
 </ion-content>

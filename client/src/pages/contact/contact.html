@@ -6,6 +6,29 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  
+<ion-content padding>
+  <h3>Cadastro de turmas</h3>
+  <ion-item>
+    <ion-label floating>Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="turma.nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Carga horária</ion-label>
+    <ion-input type="number" [(ngModel)]="turma.cargahoraria"></ion-input>
+  </ion-item>
+
+
+  <button ion-button full (click)="cadastrarTurma()">Cadastrar turma</button>
+  <button ion-button full (click)="atualiza()" style="display:none;" id="btturma">Atualizar</button>
+
+  <h3>Turmas cadastradas</h3>
+  <ion-item *ngFor="let t of turmas">
+      {{t.nome}}
+      <button (click)="deletarturma(t.id)" color="light" ion-button>
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button ion-button color="light" (click)="atualizaturma(t)">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-item>
 </ion-content>

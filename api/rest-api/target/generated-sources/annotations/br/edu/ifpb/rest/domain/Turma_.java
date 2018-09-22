@@ -7,7 +7,7 @@ import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-09-21T16:44:32")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-09-21T23:18:05")
 @StaticMetamodel(Turma.class)
 public class Turma_ { 
 

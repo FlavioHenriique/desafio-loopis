@@ -45,7 +45,7 @@ public class TurmaDAO {
     public List<Turma> todas() {
 
         return manager
-                .createQuery("SELECT d FROM Disciplina d")
+                .createQuery("SELECT d FROM Turma d",Turma.class)
                 .getResultList();
     }
 }
