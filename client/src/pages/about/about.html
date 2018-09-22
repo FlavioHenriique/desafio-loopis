@@ -7,5 +7,39 @@
 </ion-header>
 
 <ion-content padding>
+  <h3>Cadastro de professores</h3>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="professor.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Matrícula</ion-label>
+      <ion-input type="text" [(ngModel)]="professor.matricula"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Salário</ion-label>
+      <ion-input type="number" [(ngModel)]="professor.salario"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="cadastrarProfessor()">Cadastrar</button>
+  <button ion-button full (click)="atualiza()" style="display:none;" id="btAtualizarProfessor">Atualizar</button>
+  <br>
+  <h3>Professores cadastrados</h3>
+
+  <ion-item *ngFor="let professor of todos">
+    {{professor.nome}}
+    <button (click)="deletarProfessor(professor.matricula)" color="light" ion-button>
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    <button ion-button color="light" (click)="atualizarProfessor(professor)">
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+
+
+  </ion-item>
 
 </ion-content>
